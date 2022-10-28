@@ -80,4 +80,48 @@ if(document.getElementById("god").textContent === "메시"){
 };
 
 
+// while(confirm("컨펌을 받아보자")){
+//   console.log("확인..!")
+// };
 
+// console.log("넘어감");
+
+let forTest = ["messi","ronaldo","lunny", "naimar"];
+for(i=0; i< forTest.length; i++){
+  console.log(forTest[i])
+}
+  
+function sayHello(){
+  let hello = "인사";
+  return 1,2,3,4;
+};
+
+let returnHello = sayHello();
+console.log(returnHello);
+
+function sayHi(){
+  let hi = "안녕~";
+};
+
+let noReturnHi = sayHi();
+console.log(noReturnHi);
+
+// const check = window.confirm("확인해보자");
+// console.log(check);
+
+function sayAnything(thing, backNum){
+  console.log(`${thing}는(은) 공격수고 등번호는 ${backNum}이에요!`);
+};
+
+sayAnything("messi",messi);
+
+function oddEven(num){
+  if(num % 2 === 0){
+    num = "짝수";
+  }else if(num % 2 === 1){
+    num = "홀수";
+  };
+  return num;
+};
+console.log(oddEven(3));
+console.log(oddEven(4));
