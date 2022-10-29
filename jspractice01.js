@@ -125,3 +125,44 @@ function oddEven(num){
 };
 console.log(oddEven(3));
 console.log(oddEven(4));
+console.clear();
+
+const inputType = document.querySelector("#typing");
+const inputClick = document.querySelector("#push");
+
+const handleTyping = function(){
+  console.log("타이핑 되고 있어요!");
+};
+
+const handleClick = function(){
+  console.log("클릭되고 있어요!");
+};
+
+inputType.onkeydown = handleTyping;
+inputClick.onclick = handleClick;
+
+let messiCountry =  document.getElementById("godCountry");
+let sonCountry = document.getElementById("aceCountry");
+
+messiCountry.addEventListener("click" ,alertCountry);
+sonCountry.addEventListener("click" ,alertCountry);
+
+messiCountry.addEventListener("click", function(){
+  console.log("국적은 아르헨티나입니다.");
+});
+
+messiCountry.removeEventListener("click", function(){
+  console.log("국적은 아르헨티나입니다.");
+});
+
+
+function alertCountry(event){
+  let targetName = event.target.parentNode.textContent;
+  if(targetName.includes("메시")){
+    alert("아르헨티나입니다.");
+  } else{
+    alert("대한민국입니다.");
+  };
+};
+
+
