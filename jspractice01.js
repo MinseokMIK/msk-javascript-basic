@@ -130,15 +130,10 @@ console.clear();
 const inputType = document.querySelector("#typing");
 const inputClick = document.querySelector("#push");
 
-const handleTyping = function(){
-  console.log("타이핑 되고 있어요!");
-};
-
 const handleClick = function(){
   console.log("클릭되고 있어요!");
 };
 
-inputType.onkeydown = handleTyping;
 inputClick.onclick = handleClick;
 
 let messiCountry =  document.getElementById("godCountry");
@@ -165,4 +160,24 @@ function alertCountry(event){
   };
 };
 
+const appendButton = document.getElementById("push");
+const playerInput = document.getElementById("typing");
+console.log(document.querySelector("ul"));
+playerInput.addEventListener("keydown", function(){
+  console.log("키 입력")
+});
+appendButton.addEventListener("click", function(){
+  console.log("div 생성 중");
+  console.log(playerInput.value);
+  const newLi = document.createElement("li");
+  newLi.style.backgroundColor = "red";
+  document.querySelector("ul").appendChild(newLi);
+}); 
 
+const form = document.querySelector("form");
+
+form.addEventListener("submit",function(e){
+  e.preventDefault();
+  console.log(form.team.value);
+  console.log(form.league.value);
+});
