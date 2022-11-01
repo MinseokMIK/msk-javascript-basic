@@ -67,7 +67,7 @@ console.log(god);
 let text = h1.textContent;
 console.log(text);
 
-h1.textContent = "득점왕 리스트";
+// h1.textContent = "득점왕 리스트";
 console.log(text);
 console.log(h1.textContent);
 console.clear();
